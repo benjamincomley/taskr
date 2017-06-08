@@ -13,4 +13,4 @@ Feature: Register account for requester
     And I fill in field "Password" with "12345678"
     And I fill in field "Password confirmation" with "12345678"
     And I click on "Submit"
-    Then I should see "Thank you for your registration!"
+    Then I should see "Welcome! You have signed up successfully."
