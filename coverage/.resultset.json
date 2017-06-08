@@ -10,6 +10,17 @@
       "/home/benji/CraftAcademy/taskr/app/controllers/application_controller.rb": [
         1,
         1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        2,
+        1,
+        null,
+        null,
+        null,
         null
       ],
       "/home/benji/CraftAcademy/taskr/app/helpers/application_helper.rb": [
@@ -52,6 +63,6 @@
         0
       ]
     },
-    "timestamp": 1496922048
+    "timestamp": 1496923267
   }
 }

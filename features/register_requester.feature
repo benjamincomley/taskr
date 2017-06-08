@@ -7,9 +7,9 @@ Feature: Register account for requester
     Given I am on the landing page
     And I click on "Sign Up"
     Then I should see "Sign Up Form"
+    And I fill in field "Email" with "requester@ab.com"
     And I fill in field "First name" with "John"
     And I fill in field "Last name" with "Doe"
-    And I fill in field "E-mail" with "requester@ab.com"
     And I fill in field "Password" with "12345678"
     And I fill in field "Password confirmation" with "12345678"
     And I click on "Submit"
