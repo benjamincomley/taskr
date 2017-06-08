@@ -38,6 +38,7 @@
         0,
         0,
         0,
+        0,
         0
       ],
       "/home/benji/CraftAcademy/taskr/app/mailers/application_mailer.rb": [
@@ -63,7 +64,7 @@
         0
       ]
     },
-    "timestamp": 1496923385
+    "timestamp": 1496927355
   },
   "RSpec": {
     "coverage": {
@@ -130,6 +131,6 @@
         0
       ]
     },
-    "timestamp": 1496926854
+    "timestamp": 1496927372
   }
 }
