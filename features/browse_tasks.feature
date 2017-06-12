@@ -14,3 +14,6 @@ Feature: Browse open task requests
     And I should not see "pipe in kitchen broken"
     And I should see "Stockholm, Sweden"
     And I should see "70"
+    Given I click link "Bad mowing machine"
+    Then I should see "power surge damaged"
+    And I should not see "pipe in kitchen broken"
