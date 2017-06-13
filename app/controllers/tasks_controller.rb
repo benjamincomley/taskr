@@ -27,12 +27,12 @@ class TasksController < ApplicationController
   end
 
   def edit
-    @task = Task.find(params[:id])
+    @task = Task.friendly.find(params[:id])
     @task_categories = TaskCategory.all
   end
 
   def update
-    @task = Task.find(params[:id])
+    @task = Task.friendly.find(params[:id])
     if @task.requester === current_user
       if @task.update_attributes(task_params)
         redirect_to requesters_task_path(@task)
@@ -46,7 +46,7 @@ class TasksController < ApplicationController
   end
 
   def destroy
-    @task = Task.find(params[:id])
+    @task = Task.friendly.find(params[:id])
     if @task.requester === current_user
       @task.destroy
       redirect_to requesters_tasks_path

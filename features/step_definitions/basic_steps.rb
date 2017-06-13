@@ -31,7 +31,7 @@ And(/^start debugger$/) do
 end
 
 Given(/^I visit url "([^"]*)"$/) do |url|
-  visit "tasks#{url}"
+  visit "#{url}"
 end
 
 Given(/^I visit task using id of task with name "([^"]*)"$/) do |name|
