@@ -26,7 +26,15 @@ Then(/^I should not see "([^"]*)"$/) do |content|
   expect(page).not_to have_content(content)
 end
 
-
 And(/^start debugger$/) do
   binding.pry
+end
+
+Given(/^I visit url "([^"]*)"$/) do |url|
+  visit "tasks#{url}"
+end
+
+Given(/^I visit task using id of task with name "([^"]*)"$/) do |name|
+  task = Task.where(name: name).first
+  visit "tasks/#{task.id}"
 end
