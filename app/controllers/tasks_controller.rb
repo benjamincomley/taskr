@@ -57,7 +57,7 @@ class TasksController < ApplicationController
   end
 
   def show
-    @task = Task.find(params[:id])
+    @task = Task.friendly.find(params[:id])
   end
 
   private
