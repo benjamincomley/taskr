@@ -15,6 +15,17 @@ ActiveRecord::Schema.define(version: 20170613141348) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "bids", force: :cascade do |t|
+    t.integer "quote"
+    t.integer "winning_bid"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "task_id"
+    t.bigint "contractor_id"
+    t.index ["contractor_id"], name: "index_bids_on_contractor_id"
+    t.index ["task_id"], name: "index_bids_on_task_id"
+  end
+
   create_table "contractors", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -88,12 +99,18 @@ ActiveRecord::Schema.define(version: 20170613141348) do
     t.datetime "updated_at", null: false
     t.bigint "task_category_id"
     t.bigint "requester_id"
+<<<<<<< HEAD
     t.string "slug"
+=======
+    t.string "status"
+>>>>>>> develop
     t.index ["requester_id"], name: "index_tasks_on_requester_id"
     t.index ["slug"], name: "index_tasks_on_slug", unique: true
     t.index ["task_category_id"], name: "index_tasks_on_task_category_id"
   end
 
+  add_foreign_key "bids", "contractors"
+  add_foreign_key "bids", "tasks"
   add_foreign_key "tasks", "requesters"
   add_foreign_key "tasks", "task_categories"
 end
