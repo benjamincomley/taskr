@@ -13,6 +13,7 @@
 !/log/.keep
 !/tmp/.keep
 
+/spec/images
 /public/system
 /node_modules
 /yarn-error.log
