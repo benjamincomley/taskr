@@ -41,6 +41,14 @@ GEM
     addressable (2.5.1)
       public_suffix (~> 2.0, >= 2.0.2)
     arel (8.0.0)
+    aws-sdk (2.10.0)
+      aws-sdk-resources (= 2.10.0)
+    aws-sdk-core (2.10.0)
+      aws-sigv4 (~> 1.0)
+      jmespath (~> 1.0)
+    aws-sdk-resources (2.10.0)
+      aws-sdk-core (= 2.10.0)
+    aws-sigv4 (1.0.0)
     bcrypt (3.1.11)
     bindex (0.5.0)
     builder (3.2.3)
@@ -96,6 +104,10 @@ GEM
       warden (~> 1.2.3)
     diff-lcs (1.3)
     docile (1.1.5)
+    dotenv (2.2.1)
+    dotenv-rails (2.2.1)
+      dotenv (= 2.2.1)
+      railties (>= 3.2, < 5.2)
     erubi (1.6.0)
     erubis (2.7.0)
     execjs (2.7.0)
@@ -141,6 +153,7 @@ GEM
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
+    jmespath (1.3.1)
     json (2.1.0)
     launchy (2.4.3)
       addressable (~> 2.3)
@@ -298,11 +311,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  aws-sdk
   coffee-rails (~> 4.2)
   coveralls
   cucumber-rails
   database_cleaner
   devise
+  dotenv-rails
   factory_girl_rails
   faker
   guard-rails
