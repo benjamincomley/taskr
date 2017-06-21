@@ -1,4 +1,5 @@
 class BidsController < ApplicationController
+  
   def create
     @task = Task.find(params[:task_id])
     if Bid.where(user: current_user).where(task: @task).exists?
@@ -38,7 +39,7 @@ class BidsController < ApplicationController
     elsif params[:tos_accept_bid] == nil
       flash[:notice] = 'You need to check the box to accept the terms and conditions before a bid can be accepted.'
       redirect_to task_bid_path(@task, @bid)
-   elsif params[:commit] == "OK"
+    elsif params[:commit] == "OK"
       @task.status = 'Contracted'
       @task.save
       @bid.winning_bid = 1
