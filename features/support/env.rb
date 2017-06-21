@@ -16,3 +16,7 @@ end
 Cucumber::Rails::Database.javascript_strategy = :truncation
 
 World(FactoryGirl::Syntax::Methods)
+
+Before do
+  Aws.config[:s3] = {stub_responses: true}
+end
